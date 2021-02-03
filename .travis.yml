@@ -11,6 +11,7 @@ script:
   - docker run -e CI=true tparfitt/docker-react npm run test
 
 deploy:
+  skip_cleanup: true
   provider: elasticbeanstalk
   region: "eu-west-2"
   app: "docker-react"
